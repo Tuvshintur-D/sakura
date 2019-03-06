@@ -6,7 +6,7 @@
     @include('elements/header')
 
     <div class="pagedetail">
-
+      {!! Slider::render('test-slide', 'elements/slider-home') !!}
       <div class="maintitle">
         Саруул ирээдүй
       </div>
