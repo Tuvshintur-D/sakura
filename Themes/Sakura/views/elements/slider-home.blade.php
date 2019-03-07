@@ -1,8 +1,23 @@
 @foreach($slider->slides as $index=>$slide)
-<div class="pagewrap-slide-item" style="background-image: url('{{$slide->getImageUrl()}}'); background-size: cover; background-position: top;">
 
-  {!! $slide->custom_html !!}
+  <header class="head page home-header" style="background-image: url('{{$slide->getImageUrl()}}'); background-size: cover; background-position: top;">
+    <div class="container">
+      <div class="pagedetail">
 
+        <div class="maintitle">
+          {!! $slide->title !!}
+        </div>
+        <div class="subtitle">
+          {!! $slide->custom_html !!}
+        </div>
+        <div class="header-links">
+          <a class="fill-bg" href="">Дэлгэрэнгүй <i class="fa fa-chevron-right"></i> </a>
+          <a class="trans-bg" href=""><i class="fa fa-play-circle"></i> Танилцуулга</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
   {{-- <div class="intro-text">
     <div class="container">
       <div class="content">
@@ -17,5 +32,4 @@
     </div>
   </div> --}}
 
-</div>
 @endforeach

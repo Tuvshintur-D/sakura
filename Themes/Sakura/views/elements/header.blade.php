@@ -71,7 +71,10 @@
               <a class="nav-link" href="#">Суралцагчид</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="3">Мэдээ мэдээлэл</a>
+              <a class="nav-link" href="#">Мэдээ мэдээлэл</a>
+            </li>
+            <li class="nav-item elselt-menu">
+              <a class="nav-link" href="#">Элсэлт</a>
             </li>
 
           </ul>
