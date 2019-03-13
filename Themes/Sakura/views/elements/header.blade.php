@@ -59,7 +59,7 @@
               <a class="nav-link" href="#">Мэдээ мэдээлэл</a>
             </li> --}}
             <li class="nav-item active">
-              <a class="nav-link" href="#">Нүүр хуудас</a>
+              <a class="nav-link" href="{{asset('/')}}">Нүүр хуудас</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Сургуулийн тухай</a>
@@ -74,7 +74,7 @@
               <a class="nav-link" href="#">Мэдээ мэдээлэл</a>
             </li>
             <li class="nav-item elselt-menu">
-              <a class="nav-link" href="#">Элсэлт</a>
+              <a class="nav-link" href="enroll">Элсэлт</a>
             </li>
 
           </ul>

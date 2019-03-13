@@ -65,8 +65,24 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Мэдээ мэдээлэл</a>
             </li> --}}
+            
             <li class="nav-item active">
-              <a class="nav-link" href="{{asset('/')}}">Элсэлт</a>
+              <a class="nav-link" href="{{asset('/')}}">Нүүр хуудас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Сургуулийн тухай</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Сургалт</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Суралцагчид</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">Мэдээ мэдээлэл</a>
+            </li>
+            <li class="nav-item elselt-menu">
+              <a class="nav-link" href="{{asset('/enroll')}}">Элсэлт</a>
             </li>
           </ul>
         </div>

@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\App;
 use Modules\Enroll\Repositories\EnrollRepository;
 use Modules\Core\Http\Controllers\BasePublicController;
 use Illuminate\Http\Request;
+use Modules\Enroll\Entities\Enroll;
+use App\Jobs\SendEnrollJob;
 
 class PublicController extends BasePublicController
 {
@@ -30,8 +32,17 @@ class PublicController extends BasePublicController
       if(isset($data['source'])) $data['source'] = json_encode($data['source']);
 
       $result = $this->enroll->create($data);
+      dispatch(new SendEnrollJob($result));
+
       return back()->with('message', trans('enroll::enrolls.messages.created'));
 
+    }
+
+    public function sendEmail(){
+
+      $data = Enroll::orderBy('id', 'desc')->first();
+      dispatch(new SendEnrollJob($data));
+      echo "email sent";
     }
 
 }

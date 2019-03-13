@@ -19,7 +19,7 @@
                 <img src="{{Theme::url('../../assets/media/school.png')}}"> <h4>Сургуулийн тухай</h4>
             </div>
             <div class="bulan-desc">
-              <p>Сурагч нэвтэрснээр дүнгийн мэдээлэл харах</p>
+              <p>Сургуулийн тухай дэлгэрэнгүй мэдээллийг авах</p>
             </div>
           </div>
         </div>
@@ -103,6 +103,46 @@
     </div>
   </div>
 </section>
+<section class="home-transport">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-md-6">
+        <div class="home-location">
+          <h4>Сургуулийн байршил</h4>
+          <p>Нийслэлийн Хан-Уул дүүргийн 4-р хорооны нутаг дэвсгэрт Богд уулын бэл, хатан туулын хөвөөнд Улаанбаатар хотын хамгийн утаа багатай бүсэд шинэ сургуулийн барилгаа амжилттай дуусгаж, сурагч хүүхдүүдээ хүлээн авч байна</p>
+          <span>Хаяг:</span>
+          <p>Хан-Уул дүүрэг, 4 дүгээр хороо, Наадамчдын зам 306, Яармаг, Хүннү Моллын зүүн талд, Сакура Сургууль Улаанбаатар хот, Монгол улс</p>
+          <div class="location-btn">
+            <a href="#">Холбоо барих</a>
+          </div>
+          <div class="school-map" id="map">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bus-chiglel">
+          <img class="bus-main" src="{{Theme::url('../../assets/media/bus.jpg')}}" alt="">
+          <div class="school-bus">
+            <img src="{{Theme::url('../../assets/media/school-bus.png')}}" alt="">
+            <h4>Сургуулийн автобус</h4>
+          </div>
+          <p>15 жилийн туршлагатай, чадварлаг, найдвартай жолооч нар таны хүүхдийн аюулгүй байдлыг хангаж, сургуулийн автобусаар үйлчилдэг</p>
+          <div class="bus-stop">
+            <img src="{{Theme::url('../../assets/media/bus-stop.png')}}" alt="">
+            <h4>Автобусны чиглэл</h4>
+          </div>
+          <ul>
+            <li><img src="{{Theme::url('../../assets/media/marker.png')}}" alt=""> Саппоро</li>
+            <li><img src="{{Theme::url('../../assets/media/marker.png')}}" alt=""> Жуков</li>
+            <li><img src="{{Theme::url('../../assets/media/marker.png')}}" alt=""> Зайсан</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <section class="home-graduation">
   <div class="container">
     <div class="row no-gutters">
@@ -113,27 +153,7 @@
           <h3>Төгсөгчид</h3>
         </div>
         <div class="slider-for">
-
-        	<div class="item">
-        		<img src="{{Theme::url('../../assets/media/tugsugch1.png')}}" alt="image"  draggable="false"/>
-            <p>Б. Хулан</p>
-        	</div>
-        	<div class="item">
-        		<img src="{{Theme::url('../../assets/media/grad-dolgion.png')}}" alt="image" draggable="false"/>
-            <p>Д.ДОЛГИОН</p>
-        	</div>
-        	<div class="item">
-        		<img src="{{Theme::url('../../assets/media/grad-murun.png')}}" alt="image" draggable="false"/>
-            <p>П. МӨРӨН</p>
-        	</div>
-        	<div class="item">
-        		<img src="{{Theme::url('../../assets/media/grad-munkhjargal.png')}}" alt="image" draggable="false"/>
-            <p>М.МӨНХЖАРГАЛ</p>
-        	</div>
-        	<div class="item">
-        		<img src="{{Theme::url('../../assets/media/grad-enhjin.png')}}" alt="image" draggable="false"/>
-            <p>Х. Энхжин</p>
-        	</div>
+          {!! Slider::render('graduate-slide', 'elements/slider-graduate') !!}
 
         </div>
 
@@ -143,7 +163,8 @@
 
 
         <div class="slider-nav">
-        	<div class="item">
+          {!! Slider::render('graduate-slide', 'elements/slider-graduate-content') !!}
+        	{{-- <div class="item">
         		<div class="info-title">
               <p>АЖИЛ ХЭРЭГЧ, БҮТЭЭЛЧ ДАДЛЫГ САКУРА СУРГУУЛЬ МИНЬ НАДАД ТӨЛӨВШҮҮЛЖЭЭ</p>
             </div>
@@ -188,14 +209,15 @@
               <p>Японд суралцах хүсэлдээ хөтлөгдөн Сакура сургуульд орж, 2012 онд төгссөн. Улмаар Соёл эрдэм дээд сургуульд элсэн, 2 жилийн дараа Сакура сургуультай хамтран ажилладаг Нийгата мужийн Нагаокагийн Их сургуульд элссэн. Сакура сургууль маань 50 хувийн хөнгөлөлттэй суралцах боломж олгосонд баярладаг. Их сургуульд багш нар японоор лекц уншиж, бид бие даах ажлаа японоор хийж чадаж байсан нь бидний Сакура сургуульд суралцсан хэлний түвшинтэй холбоотой гэж бодож явдаг. Би их сургуульд суралцах үедээ хэлний мэдлэгээ дээшлүүлэхийн тулд уйгагүй хөдөлмөрлөж, нэгдүгээр түвшний шалгалтад тэнцэж, Ёнэяма ротарийн нэрэмжит тэтгэлэгт (сарын 1300 ам.доллар) хамрагдсан. Мөн Нийгата мужийн эмэгтэй гадаад оюутнуудын Япон хэл дээрх илтгэлийн уралдаанд түрүүлсэн.</p>
             </div>
             <img src="{{Theme::url('../../assets/media/quote.png')}}" alt="">
-        	</div>
+        	</div> --}}
         </div>
         <div class='grad-small'>
-          <div class="small-img" id="grad-0"><img src="{{Theme::url('../../assets/media/tugsugch1.png')}}" alt="image"  draggable="false"/></div>
+          {!! Slider::render('graduate-slide', 'elements/grad-pagination') !!}
+          {{-- <div class="small-img" id="grad-0"><img src="{{Theme::url('../../assets/media/tugsugch1.png')}}" alt="image"  draggable="false"/></div>
           <div class="small-img" id="grad-1"><img src="{{Theme::url('../../assets/media/grad-dolgion.png')}}" alt="image"  draggable="false"/></div>
           <div class="small-img" id="grad-2"><img src="{{Theme::url('../../assets/media/grad-murun.png')}}" alt="image"  draggable="false"/></div>
           <div class="small-img" id="grad-3"><img src="{{Theme::url('../../assets/media/grad-munkhjargal.png')}}" alt="image"  draggable="false"/></div>
-          <div class="small-img" id="grad-4"><img src="{{Theme::url('../../assets/media/grad-enhjin.png')}}" alt="image"  draggable="false"/></div>
+          <div class="small-img" id="grad-4"><img src="{{Theme::url('../../assets/media/grad-enhjin.png')}}" alt="image"  draggable="false"/></div> --}}
         </div>
 
         {{-- <div class="grad-small">
@@ -369,7 +391,7 @@
         speed: 600,
         cssEase: 'linear',
         autoplay: true,
-        autoplaySpeed: 8000,
+        autoplaySpeed: 7000,
         arrows: false
       });
       $('.grad-small > div').click(function() {
@@ -385,6 +407,30 @@
 
 
 </script>
+<script>
+      function initMap() {
+        var myLatLng = {lat: 47.879470, lng: 106.853748};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 15
+        });
+
+        var image = "{{Theme::url('../../assets/media/map-marker.png')}}";
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          icon: image,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXxafAk7q6nk808dP96itY7rJsNL5-fb8&callback=initMap" type="text/javascript"></script>
 @stop
 <footer class="footer">
 

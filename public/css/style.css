@@ -5,13 +5,25 @@
 * styles for about us page
 *
 *************/
-.about-us.head.page {
+/* .about-us.head.page {
 
+} */
+.about-us.page-header .pagedetail .subtitle{  
+  margin-top: 10px;
 }
 .aboutus-introduction-sec{
   padding-top:50px;
   padding-bottom: 50px;
   overflow-x:hidden;
+}
+.school-building{
+  position: absolute;
+  right: 0;
+  border: 0;
+  bottom: 0;
+  width: 740px;
+  height: auot;
+  height: auto;
 }
 .aboutus-introduction-sec .row{
   margin-bottom:0;
@@ -30,6 +42,7 @@
   font-weight: 500;
   color:#333;
 }
+
 .aboutus-introduction-sec ul.nav-pills>li a:not(.active):hover{
 
   color:#2398d9;

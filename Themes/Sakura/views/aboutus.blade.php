@@ -1,28 +1,26 @@
 @extends('layouts.master')
 @php
-  //dump($page);
+  // dump($page);
 @endphp
 
 @section('content')
-<header class="about-us head page page-header" @if(isset($page->image->path)) style="background-image: url('{{ $page->image->path }}')" @endif>
+<header class="about-us head page page-header">
   <div class="container">
 
     @include('elements/header')
-
     <div class="pagedetail">
-      <div class="maintitle">
-        {{$page->title}}
-      </div>
-      <div class="subtitle">
-
-      </div>
-      <div class="header-links">
-        {{-- <a class="fill-bg" href="">Дэлгэрэнгүй <i class="fa fa-chevron-right"></i> </a>
-        <a class="trans-bg" href=""><i class="fa fa-play-circle"></i> Танилцуулга</a> --}}
-      </div>
+        <div class="maintitle">
+          {{$page->title}}
+        </div>
+        <div class="subtitle">
+          {!!$page->body!!}
+        </div>
+        
     </div>
 
   </div>
+  <img class="school-building" src="{{Theme::url('../../assets/media/school-cropped.png')}}">
+
 </header>
 
 <section class="aboutus-introduction-sec about ">
@@ -61,7 +59,9 @@
             <div id="anthem" class="tab-pane fade">
               <p>{!! Block::get('aboutus-anthem') !!}</p>
             </div>
-
+         
+    
+            
             <div id="founder" class="tab-pane fade">
               <p>{!! Block::get('aboutus-introduction') !!}</p>
 
@@ -81,39 +81,7 @@
         </div>
       </div>
 
-      {{-- <div class="row">
-        <div class="col-sm-3">
-          <ul class="nav nav-pills flex-column">
-            <li ><a class="active" data-toggle="pill" href="#home">Бидний тухай</a></li>
-            <li><a data-toggle="pill" href="#intro">Танилцуулга</a></li>
-            <li><a data-toggle="pill" href="#history">Эрхэм зорилго</a></li>
-            <li><a data-toggle="pill" href="#anthem">Сүлд дуу</a></li>
-          </ul>
 
-
-        </div>
-        <div class="col-sm-6">
-
-          <div class="tab-content ">
-            <div id="home" class="tab-pane in active">
-              <p>{!! Block::get('aboutus-introduction') !!}</p>
-            </div>
-            <div id="intro" class="tab-pane fade">
-              <p>{!! Block::get('aboutus-introduction') !!}</p>
-            </div>
-            <div id="history" class="tab-pane fade">
-              <p>{!! Block::get('aboutus-introduction') !!}</p>
-            </div>
-            <div id="anthem" class="tab-pane fade">
-              <p>{!! Block::get('aboutus-introduction') !!}</p>
-            </div>
-          </div>
-
-        </div>
-        <div class="col-sm-3">
-          <p class="main-purpose">Дэлхийд алдар нэрээ цуурайтуулсан, өв тэгш боловсролтой шинэ зууны иргэдийг бэлтгэх эрхэм зорилгын төлөө өөрийн мэдлэг оюун, сэтгэл зүрхээ зориулан ажиллаж байна.</p>
-        </div>
-      </div> --}}
 
   </div>
 </section>

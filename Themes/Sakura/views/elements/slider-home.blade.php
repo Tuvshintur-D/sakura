@@ -1,6 +1,6 @@
 @foreach($slider->slides as $index=>$slide)
 
-  <header class="head page home-header" style="background-image: url('{{$slide->getImageUrl()}}'); background-size: cover; background-position: top;">
+  <header class="head home-header" style="background-image: url('{{$slide->getImageUrl()}}'); background-size: cover; background-position: top;">
     <div class="container">
       <div class="pagedetail">
 
