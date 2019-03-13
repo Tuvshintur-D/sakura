@@ -430,7 +430,7 @@
       }
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXxafAk7q6nk808dP96itY7rJsNL5-fb8&callback=initMap" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY-fb8&callback=initMap" type="text/javascript"></script>
 @stop
 <footer class="footer">
 
